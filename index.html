@@ -15,7 +15,10 @@
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
           <button type="submit" name="login">Login</button>
-          <p>Don't Have a account ? <a href="#">Register</a></p>
+          <p>
+            Don't Have a account ?
+            <a href="#" onclick="showForm('Register-form')">Register</a>
+          </p>
         </form>
       </div>
 
@@ -41,9 +44,13 @@
             <option value="admin">Admin</option>
           </select>
           <button type="submit" name="register">Register</button>
-          <p>Already have an account ? <a href="#">Login</a></p>
+          <p>
+            Already have an account ?
+            <a href="#" onclick="showForm('login-form')">Login</a>
+          </p>
         </form>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

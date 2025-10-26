@@ -11,9 +11,9 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(50deg, rgba(97, 252, 255, 0.52), rgba(112, 136, 255, 0.87));
--webkit-background: linear-gradient(50deg, rgba(97, 252, 255, 0.52), rgba(112, 136, 255, 0.87));
--moz-background: linear-gradient(50deg, rgba(97, 252, 255, 0.52), rgba(112, 136, 255, 0.87));
+    background: linear-gradient(57deg, rgba(248, 155, 93, 1), rgba(186, 64, 23, 1));
+-webkit-background: linear-gradient(57deg, rgba(248, 155, 93, 1), rgba(186, 64, 23, 1));
+-moz-background: linear-gradient(57deg, rgba(248, 155, 93, 1), rgba(186, 64, 23, 1));
 color: #333;
 
 }
@@ -68,7 +68,7 @@ button{
     border: none;
     outline: none;
     color: #fff;
-    background-color: #7494ec;
+    background-color: rgb(248, 155, 93);
     font-size: 16px;
     margin-bottom: 20px;
     font-weight: 500;
@@ -76,7 +76,7 @@ button{
     transition: 0.5s;
 }
 button:hover{
-    background-color: #6884d3;
+    background-color: rgb(244,135, 62);
 }
 p{
     text-align: center;
@@ -85,7 +85,7 @@ p{
 }
 p a{
     text-decoration: none;
-    color: #7494ec;
+    color: rgb(186, 64, 23);
 }
 p a:hover{
     text-decoration: underline;
