@@ -25,7 +25,18 @@ body{
 -webkit-background: linear-gradient(57deg, rgba(248, 155, 93, 1), rgba(186, 64, 23, 1));
 -moz-background: linear-gradient(57deg, rgba(248, 155, 93, 1), rgba(186, 64, 23, 1));
 color: #333;
+animation: fadeIn 0.4s ease-in-out;
 
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .container{
     margin: 0 15px;
