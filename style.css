@@ -215,14 +215,14 @@ p a:hover{
         }
 
         .btn-secondary {
-            background-color: #90EE90;
+            background-color: #69ea69;
             color: #333;
             font-size: 15px;
             width: 151.8px;
         }
 
         .btn-secondary:hover {
-            background-color: #7FD87F;
+            background-color: #90ee90;
         }
 
         .btn-edit {
