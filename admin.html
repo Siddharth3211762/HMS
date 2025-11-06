@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - HMS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>HMS</h1>
+
+      <div class="dashboard-container" id="mainDashboard">
+        <div class="dashboard-header">
+          <h2>Admin</h2>
+          <div class="search-bar">
+            <input
+              type="text"
+              placeholder="Doctor, Patient, Department..."
+              id="searchInput"
+            />
+            <button class="btn btn-primary" onclick="search()">Search</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 15px;
+              flex: 1;
+            "
+          >
+            <div class="section-title">Registered Doctors</div>
+            <button
+              class="btn btn-secondary"
+              onclick="openModal('addDoctorModal')"
+            >
+              Create
+            </button>
+          </div>
+
+          <div class="list-item">
+            <div class="list-item-info">Dr. abcde</div>
+            <div class="list-item-actions">
+              <button class="btn btn-edit">Edit</button>
+              <button class="btn btn-delete">Delete</button>
+              <button class="btn btn-blacklist">Blacklist</button>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="list-item-info">Dr. pqrst</div>
+            <div class="list-item-actions">
+              <button class="btn btn-edit">Edit</button>
+              <button class="btn btn-delete">Delete</button>
+              <button class="btn btn-blacklist">Blacklist</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Registered Patients</div>
+
+          <div class="list-item">
+            <div class="list-item-info">Mr. abcde</div>
+            <div class="list-item-actions">
+              <button class="btn btn-edit">Edit</button>
+              <button class="btn btn-delete">Delete</button>
+              <button class="btn btn-blacklist">Blacklist</button>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="list-item-info">Miss. Pqrst</div>
+            <div class="list-item-actions">
+              <button class="btn btn-edit">Edit</button>
+              <button class="btn btn-delete">Delete</button>
+              <button class="btn btn-blacklist">Blacklist</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Upcoming Appointments</div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sr No.</th>
+                  <th>Patient Name</th>
+                  <th>Doctor Name</th>
+                  <th>Department</th>
+                  <th>Patient History</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1001.</td>
+                  <td>Mr. abcde</td>
+                  <td>Dr. pqrst</td>
+                  <td>Cardiology</td>
+                  <td>
+                    <button class="btn btn-view" onclick="openPatientHistory()">
+                      View
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Doctor Modal -->
+      <div class="modal" id="addDoctorModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Add a new Doctor</h3>
+            <button class="close-btn" onclick="closeModal('addDoctorModal')">
+              &times;
+            </button>
+          </div>
+          <form>
+            <div class="form-group">
+              <label>Fullname</label>
+              <input type="text" placeholder="Enter doctor's name" required />
+            </div>
+            <div class="form-group">
+              <label>Specialization/Department</label>
+              <input type="text" placeholder="Enter specialization" required />
+            </div>
+            <div class="form-group">
+              <label>Experience (years)</label>
+              <input
+                type="number"
+                placeholder="Enter years of experience"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-secondary" style="width: 100%">
+              create
+            </button>
+          </form>
+          <p
+            style="
+              text-align: center;
+              font-size: 13px;
+              color: #666;
+              margin-top: 15px;
+            "
+          >
+            Students can add more fields if required
+          </p>
+        </div>
+      </div>
+
+      <!-- Patient History Modal -->
+      <div class="modal" id="patientHistoryModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Patient History</h3>
+            <button
+              class="close-btn"
+              onclick="closeModal('patientHistoryModal')"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="patient-history-content">
+            <div class="patient-info">
+              <p><strong>Patient Name:</strong> Mr. abcde</p>
+              <p><strong>Doctors' Name:</strong> Dr. pqrst</p>
+              <p><strong>Department:</strong> Cardiology</p>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Visit No.</th>
+                    <th>Visit Type</th>
+                    <th>Tests Done</th>
+                    <th>Diagnosis</th>
+                    <th>Prescription</th>
+                    <th>Medicines</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>In-person</td>
+                    <td>ECG</td>
+                    <td>Abnormal Heartbeats</td>
+                    <td>exercise daily</td>
+                    <td>Medicine 1</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td>In-person</td>
+                    <td>ECG</td>
+                    <td>Abnormal Heartbeats</td>
+                    <td>exercise daily</td>
+                    <td>Medicine 2</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>In-person</td>
+                    <td>ECG</td>
+                    <td>normal Heartbeats</td>
+                    <td>cont. exercise</td>
+                    <td>Medicine 3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <button
+            class="btn btn-back"
+            style="width: 100%; margin-top: 20px"
+            onclick="closeModal('patientHistoryModal')"
+          >
+            back
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(modalId) {
+        document.getElementById(modalId).classList.add("active");
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove("active");
+      }
+
+      function openPatientHistory() {
+        openModal("patientHistoryModal");
+      }
+
+      function search() {
+        const searchValue = document.getElementById("searchInput").value;
+        alert("Searching for: " + searchValue);
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        if (event.target.classList.contains("modal")) {
+          event.target.classList.remove("active");
+        }
+      };
+    </script>
+  </body>
+</html>
