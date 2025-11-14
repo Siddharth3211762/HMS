@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(57deg, rgba(248, 155, 93, 1), rgba(186, 64, 23, 1));
+}
+
+.main {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 900px;
+  width: 95%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+}
+
+.day-header {
+  font-weight: bold;
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.day {
+  border-radius: 8px;
+  padding: 15px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  transition: 0.3s;
+}
+
+.day.available {
+  background: #f0fdf4;
+  border-color: #16a34a;
+  color: #15803d;
+}
+
+.day.unavailable {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.day:hover {
+  transform: scale(1.05);
+}
+
+.save-btn {
+  width: 90px;
+  margin-top: 30px;
+  background: #22c55e;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.save-btn:hover {
+  background: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

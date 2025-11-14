@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="docupdatestyle.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1>Update Patient History</h1>
+        <p><strong>Patient Name:</strong> Mr. abcde</p>
+        <p><strong>Department:</strong> Cardiology</p>
+
+        <form class="history-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Visit Type</label>
+              <input type="text" placeholder="Enter visit type" />
+            </div>
+            <div class="form-group">
+              <label>Test Done</label>
+              <input type="text" placeholder="Enter test done" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Diagnosis</label>
+              <input type="text" placeholder="Enter diagnosis" />
+            </div>
+            <div class="form-group">
+              <label>Medicines</label>
+              <textarea
+                rows="4"
+                placeholder="Medicine 1 - 1-0-1&#10;Medicine 2 - 0-1-1"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label>Prescription</label>
+              <input type="text" placeholder="Enter prescription" />
+            </div>
+          </div>
+
+          <button type="submit" class="save-btn">Save</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
